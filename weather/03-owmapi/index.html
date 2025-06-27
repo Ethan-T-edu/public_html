@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nate &amp; Prof Loi</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>    <div id="dev-controls">
+        <div class="controls">
+            <input id="location-input" type="text" placeholder="Enter city name (e.g., Worcester, Boston, London)" value="Worcester" style="width: 200px; margin-right: 10px;" onchange="loadAllDataForLocation()">
+            <button onclick="loadAllDataForLocation()">LOAD LOCATION</button>
+            <button onclick="getWeather()">LOAD WEATHER</button>
+            <button onclick="getForecast()">LOAD FORECAST</button>
+            <button onclick="getPollution()">LOAD POLLUTION</button>
+        </div>
+        <div class="controls">
+            <input id="testnum" type="number" min="1" max="5" value="1">
+            <button onclick="testLocation()">TEST LOCATION</button>
+            <button onclick="testWeather()">TEST WEATHER</button>
+            <button onclick="testForecast()">TEST FORECAST</button>
+            <button onclick="testPollution()">TEST POLLUTION</button>
+        </div>
+    </div>    <button onclick="load1()">LOAD FROM example.js</button>
+    
+    <!-- Weather Chatbot Section -->
+    <div id="chatbot-section">
+        <h3>🤖 Weather Chat Assistant</h3>
+          <div id="api-key-section">
+            <div class="api-key-input-group">
+                <input id="api-key-input" type="password" placeholder="Enter your Gemini API key" onkeypress="handleApiKeyPress(event)">
+                <button id="toggle-api-key" onclick="toggleApiKeyVisibility()" title="Show/Hide API Key">👁️</button>
+            </div>
+            <button onclick="initializeChatbot(document.getElementById('api-key-input').value)">Connect Chatbot</button>
+        </div>
+        
+        <div id="chat-container">
+            <div id="chat-messages"></div>
+            <div id="chat-input-container">
+                <input id="chat-input" type="text" placeholder="Ask me about the weather..." disabled onkeypress="handleChatKeyPress(event)">
+                <button id="send-btn" onclick="sendChatMessage()" disabled>Send</button>
+            </div>
+        </div>
+    </div>
+    
+    <h2 id="location">LOCATION</h2>
+    <p id="weather-report">WEATHER REPORT</p>
+    
+    <table id="forecast-table"></table>
+
+    <p id="pollution-report">POLLUTION REPORT</p>    <script src="./OMGeocode.js"></script>
+    <script src="./OMForecast.js"></script>
+    <script src="./OMWeather.js"></script>
+    <script src="./OMPollution.js"></script>
+    <script src="./WeatherChatbot.js"></script>
+    
+    <script src="./display.js"></script>
+    <script src="./trigger.js"></script>
+
+    <script src="./example.js"></script>
+</body>
+</html>

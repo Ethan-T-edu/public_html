@@ -1,0 +1,79 @@
+#tswcssbuttons {
+  width: 180px;
+  max-width: 100%;
+  text-align: center;
+}
+
+#tswcssbuttons ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: outside none none;
+}
+
+#tswcssbuttons li {
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  list-style: outside none none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#tswcssbuttons li a {
+  color: black;
+  background-color: #ff6600;
+  border: 1px solid #999; /* Changed from 'outset black' to a subtle solid grey border */
+  border-radius: 8px; /* Added rounded corners for a smoother look */
+  text-decoration: none;
+  display: block;
+  padding: 8px 15px; /* Added padding to give buttons more breathing room */
+  margin-bottom: 5px; /* Added space between navigation items */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Add a hover effect for non-active links */
+#tswcssbuttons li a:hover {
+  background-color: #ff8800; /* Slightly lighter orange on hover */
+  border-color: #777; /* Darker grey border on hover */
+}
+
+/* Style for the active/current page link */
+#tswcssbuttons li.active a {
+  background-color: #cccccc; /* A muted/different color */
+  color: #333333;
+  font-weight: bold;
+  cursor: default; /* Changes the mouse pointer to show it's not clickable */
+  border-color: #aaa; /* Ensure active link also has a consistent border style */
+}
+
+/* Disable the hover effect for the active link */
+#tswcssbuttons li.active a:hover {
+  background-color: #cccccc; 
+  border-color: #aaa; /* Keep border consistent on hover for active link */
+}
+
+h1 {
+  font-size: 250%;
+}
+
+#tswcontproper {
+  color: #1a2b1a;
+}
+
+p {
+  background-color: #ffcc00;
+  color: black;
+}
+
+div {
+  background-color: #ffcc00 !important;
+}
+
+ul {
+  background-color: white;
+  color: white;
+}
+
+li {
+  background-color: white;
+  color: white;
+}
