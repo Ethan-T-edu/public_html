@@ -47,6 +47,35 @@ h2, p {
     text-align: center;
 }
 
+/* Example Questions Styles */
+#example-questions {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#example-questions p {
+    margin: 0 0 8px 0;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.example-q-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #777;
+    color: white;
+    padding: 6px 12px;
+    margin: 0 5px 5px 5px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.example-q-btn:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-color: #fff;
+}
+
 /* Chatbot Styles */
 #chatbot-section {
     background-color: rgba(255, 255, 255, 0.1);

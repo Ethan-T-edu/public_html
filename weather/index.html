@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nate &amp; Prof Loi</title>
+    <title>Nate &amp; Prof Loi &amp; Weather Chatbot &amp; Ethan</title>
     <link rel="stylesheet" href="weather.css">
 </head>
 <body>    <div id="dev-controls">
@@ -15,14 +15,14 @@
             <button onclick="getForecast()">LOAD FORECAST</button>
             <button onclick="getPollution()">LOAD POLLUTION</button>
         </div>
-        <div class="controls">
+        <!-- <div class="controls">
             <input id="testnum" type="number" min="1" max="5" value="1">
             <button onclick="testLocation()">TEST LOCATION</button>
             <button onclick="testWeather()">TEST WEATHER</button>
             <button onclick="testForecast()">TEST FORECAST</button>
             <button onclick="testPollution()">TEST POLLUTION</button>
-        </div>
-    </div>    <button onclick="load1()">LOAD FROM example.js</button>
+        </div> -->
+    </div>
     
     <!-- Weather Chatbot Section -->
     <div id="chatbot-section">
@@ -33,6 +33,13 @@
                 <button id="toggle-api-key" onclick="toggleApiKeyVisibility()" title="Show/Hide API Key">👁️</button>
             </div>
             <button onclick="initializeChatbot(document.getElementById('api-key-input').value)">Connect Chatbot</button>
+        </div>
+
+        <div id="example-questions">
+            <p>Try asking:</p>
+            <button class="example-q-btn" onclick="setChatInput('What is the weather like tomorrow?')">"What is the weather like tomorrow?"</button>
+            <button class="example-q-btn" onclick="setChatInput('Is it safe to go outside?')">"Is it safe to go outside?"</button>
+            <button class="example-q-btn" onclick="setChatInput('Compare the weather today and tomorrow.')">"Compare today and tomorrow."</button>
         </div>
         
         <div id="chat-container">
@@ -59,5 +66,13 @@
     <script src="./trigger.js"></script>
 
     <script src="./example.js"></script>
+
+    <script>
+        function setChatInput(question) {
+            const chatInput = document.getElementById('chat-input');
+            chatInput.value = question;
+            chatInput.focus(); // Focus on the input field after setting the value
+        }
+    </script>
 </body>
 </html>
